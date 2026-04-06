@@ -12,7 +12,7 @@ dropout_files=(
 dropout_ignores=(
   'ac97_bus'
   'snd_pcm_dmaengine'
-  'i915'
+  'i915' 'mei_pxp' 'mei_hdcp' 'intel_gtt'
 )
 
 function dropout_merge() {
