@@ -38,6 +38,7 @@ drm_panel_backlight_quirks
 drm_suballoc_helper
 drm_ttm_helper
 ee1004
+exfat
 f2fs
 fat
 ff_memless
@@ -69,6 +70,7 @@ iptable_filter
 iptable_nat
 iptable_raw
 irqbypass
+isofs
 joydev
 k10temp
 kvm
