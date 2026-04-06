@@ -22,6 +22,13 @@ function dropout_filter() {
   echo "${dropout_ignores[*]}" | sed -e 's/^/^(/' -e 's/ /|/g' -e 's/$/)$/'
 }
 
+if [ "${#dropout_files}" -eq 0 ]; then
+  echo "E: empty file list in script" >&2
+  exit 1
+fi
+
 dropout_merge | grep -Ev "$(dropout_filter)" > merged.txt
 
-echo "W: excluding the following modules: ${dropout_ignores[*]}" >&2
+if [ "${#dropout_ignores}" -ne 0 ]; then
+  echo "W: excluding the following modules: ${dropout_ignores[*]}" >&2
+fi
