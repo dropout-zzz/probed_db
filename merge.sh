@@ -12,6 +12,7 @@ dropout_files=(
 dropout_ignores=(
   'ac97_bus'
   'snd_pcm_dmaengine'
+  'i915'
 )
 
 function dropout_merge() {
